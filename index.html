@@ -136,6 +136,74 @@ main{
 .card{
   margin-bottom: 30px;
 }
+
+
+
+
+/* ===== Electric Project Card ===== */
+.electric-card {
+  position: relative;
+  padding: 40px;
+  border-radius: 20px;
+  background: #0b1220;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff;
+  transition: 0.4s ease;
+}
+
+.electric-card:hover {
+  box-shadow: 0 0 50px #00f0ff;
+  transform: translateY(-8px);
+}
+
+.electric-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.electric-card .project-btn {
+  background: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  margin: 8px;
+}
+
+.electric-card .project-btn:hover {
+  background: #00f0ff;
+  color: black;
+}
+.electric-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff;
+  padding: 0;
+}
+
+.project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+}
+
+.electric-card:hover {
+  box-shadow: 0 0 50px #00f0ff;
+  transform: translateY(-8px);
+  transition: .4s;
+}
     /* Toggle animation */
     #menu-toggle:checked + .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
     #menu-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
@@ -345,37 +413,77 @@ By combining university education with practical experience, we strive to delive
    <section id="project" class="reveal">
   <div class="container grid">
 
-    <div class="feature card">
-      <div class="kicker"></div>
-      <h2>OUR PROJECT</h2>
+    <div class="feature electric-card">
+  
+  <img src="IMG_2799.jpeg" class="none">
 
-      <!-- Button Link -->
-       <div class="btn-group">
-    <a href="https://amz-group.github.io/amz-maths"target="_blank" class="project-btn">Mathematics Solver</a>
-    <a href="https://amz-group.github.io/mba-QRcode" target="_blank" class="project-btn">QRcode</a>
-  </div>
-  </div>
-  <div class="feature card">
-      <div class="kicker"></div>
-      <h2>OUR Graphic design</h2>
+  <div class="card-content">
+    
+    </div>
+    <h2>MATHEMATICS SOLVER</h2>
+    <p>This project solves mathematical equations quickly
+    and accurately, providing clear step-by-step solutions
+     to help students understand and learn better.
+</p>
 
-      <!-- Button Link -->
-       <div class="btn-group">
-    <a href="https://mohammedbarzan-ali.github.io/mba-maths/" target="_blank" class="project-btn">none</a>
-    <a href="https://mohammedbarzan-ali.github.io/mba-QRcode" target="_blank" class="project-btn">none</a>
+    <div class="btn-group">
+      <a href="https://amz-group.github.io/amz-maths" target="_blank" class="project-btn">Open Project</a>
+    </div>
+    </div>
+   
+<!-- Card 2 -->
+    <div class="feature electric-card">
+  <img src="IMG_2794.jpeg" class="none">
+  <div class="card-content">
+    </div>
+    <h2>SPEED WIFI</h2>
+    <p>A smart WiFi speed testing website designed to measure download speed, 
+upload speed, and ping in real-time, helping users monitor their internet performance easily.
+
+</p>
+    <div class="btn-group">
+      <a href="https://amz-group.github.io/speed-wifi" target="_blank" class="project-btn">Open Project</a>
+    </div>
+  </div>
+<!-- Card 3 -->
+    <div class="feature electric-card">
+  <img src="IMG_2798.jpeg" class="none">
+  <div class="card-content">
+    </div>
+    <h2>QRCODE PRO</h2>
+    <p>Modern QR Code Generator & Scanner Web App with Camera Support, Image Scan, Download Option, Multi-Language, Login System, QR History & PWA Installable Design.
+
+</p>
+    <div class="btn-group">
+      <a href="https://amz-group.github.io/Qrcode-pro" target="_blank" class="project-btn">Open Project</a>
+    </div>
+  </div>
+  <!-- Card 4 -->
+    <div class="feature electric-card">
+  <img src="IMG_2797.jpeg" class="none">
+  <div class="card-content">
+    </div>
+    <h2>AMZ SNAKE</h2>
+    <p>Snake is a classic arcade game where players control a growing snake that eats apples to increase its length. The challenge is to avoid hitting the walls or the snake’s own body as it moves faster over time.
+</p>
+    <div class="btn-group">
+      <a href="https://amz-group.github.io/Snake-Game" target="_blank" class="project-btn">Open Project</a>
+    </div>
+  </div>
+  <!-- Card 4 -->
+    <div class="feature electric-card">
+  <img src="IMG_2796.jpeg" class="none">
+  <div class="card-content">
+    </div>
+    <h2>AMZ FLAPPY BIRD</h2>
+    <p>Flappy Bird is a highly addictive arcade game where players tap to guide a bird through endless obstacles, testing their timing and precision in a simple yet challenging experience
+</p>
+    <div class="btn-group">
+      <a href="https://amz-group.github.io/flappy-bird" target="_blank" class="project-btn">Open Project</a>
+    </div>
   </div>
 </div>
-<div class="feature card">
-      <div class="kicker"></div>
-      <h2>OUR Presentations design</h2>
 
-      <!-- Button Link -->
-       <div class="btn-group">
-    <a href="https://mohammedbarzan-ali.github.io/mba-maths/" target="_blank" class="project-btn">none</a>
-    <a href="https://mohammedbarzan-ali.github.io/mba-QRcode" target="_blank" class="project-btn">none</a>
-  </div>
-</div>
-</div>
 
 </section>
 
@@ -499,7 +607,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 
 </html>
-
 
 
 
