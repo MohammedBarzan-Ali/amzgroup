@@ -204,6 +204,30 @@ main{
   transform: translateY(-8px);
   transition: .4s;
 }
+
+
+
+/* ===== lang===*/
+#languageSelect{
+  padding:6px 12px;
+  border-radius:10px;
+  background:#111a2e;
+  color:white;
+  border:1px solid rgba(255,255,255,.2);
+  cursor:pointer;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .menu {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cta {
+  flex-direction: row-reverse;
+}
     /* Toggle animation */
     #menu-toggle:checked + .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
     #menu-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
@@ -301,6 +325,12 @@ main{
 
     <!-- Menu -->
     <nav class="menu">
+        <select id="languageSelect">
+           
+  <option value="en">English</option>
+  <option value="ku">کوردی</option>
+  
+</select>
       <a href="#home">Home</a>
       <a href="#about">About Us</a>
       <a href="#project">Our Project</a>
@@ -315,11 +345,16 @@ main{
       <div class="container hero-inner">
         <div class="card">
           <span class="tag">Welcome to</span>
-          <h1>AMZ GROUP for general development</h1>
-          <p class="lead">AMZ Group is a professional team in the development of websites، software، applications and games. We provide modern and innovative solutions with high quality and international standards. It's a place to build your ideas of growth and innovation.</p>
+          <h1 data-i18n="homeTitle">
+  AMZ GROUP for general development
+</h1>
+
+          <p class="lead" data-i18n="homeDesc">
+            AMZ Group is a professional team in the development of websites، software، applications and games. We provide modern and innovative solutions with high quality and international standards. It's a place to build your ideas of growth and innovation.</p>
+          
           <div class="cta">
-            <a class="btn primary" href="#contact">Contact Us</a>
-            <a class="btn" href="#project">View our projects</a>
+            <a class="btn primary" href="#contact" data-i18n="contactBtn">Contact Us</a>
+            <a class="btn" href="#project"data-i18n="projectBtn">View our projects</a>
           </div>
         </div>
         <div class="pfp">
@@ -333,24 +368,22 @@ main{
     
       <div class="container grid">
         <div class="feature card">
-          <div class="kicker">About Team</div>
+          <div class="kicker"data-i18n="aboutTeam">About Team</div>
           <h2>AMZ GROUP</h2>
-          <p>It consists of Mohammed Barzan، Zhalla Karwan and Anas Mohsen We are a team that works with collaboration and creativity to create high quality websites، software and programs
+          <p data-i18n="aboutDesc">This team consists of Mohammed Barzan, Zhala Karwan, Anas Mohsen. We are a team working to create websites, software, applications, and solutions in an advanced and world-class standard.</p>
 
-Our goal is to develop modern digital solutions and professional services for our customers.</p>
-
-		  <a class="btn primary" href="#about">More Info</a>
+		  <a class="btn primary" href="#about"data-i18n="moreinfo">More Info</a>
 		    </div>
         <div class="feature card">
-          <div class="kicker">Skills & Interests</div>
-          <h2>What I Like Doing</h2>
+          <div class="kicker"data-i18n="skill">Skills & Interests</div>
+          <h2 data-i18n="skill2">The goals of the team</h2>
           <div class="list">
-            <div class="row"><span class="dot"></span>
+            <div class="row"><span class="dot"></span><p data-i18n="skillDesc">
 • New Technologies
  • Innovation and Update.
  • Digital system development.
  • Continuous learning.
- • Creating large projects and professional work.</div>
+ • Creating large projects and professional work.</p></div>
           </div>
         </div>
       </div>
@@ -359,8 +392,8 @@ Our goal is to develop modern digital solutions and professional services for ou
     <section id="about" class="reveal">
   <div class="container">
     <div class="card">
-      <div class="kicker">About Developer</div>
-      <h2>Information About a Group</h2>
+      <div class="kicker"data-i18n="aboutDev">About Developer</div>
+      <h2 data-i18n="devinfo">Information About a Team</h2>
 
       <div class="grid">
 
@@ -369,9 +402,7 @@ Our goal is to develop modern digital solutions and professional services for ou
                alt="Mohammed Barzan" 
                class="profile-img">
           <h3>👑 • Mohammed Barzan</h3>
-          <p>is the Founder and Team Leader of AMZ Group. 
-He leads the vision of the team with strong expertise in web development, design, and engineering and programming. 
-With leadership skills and innovation, he ensures high-quality digital solutions and professional standards in every project.</p>
+          <p data-i18n="Mabout">Founder and Team Leader، Mohammad Barzan is a student in the IT department and a project initiator who is an expert in the field of website building، design، and programming، in a fully advanced and standardized manner.</p>
         </div>
 
         <div class="feature card">
@@ -379,7 +410,7 @@ With leadership skills and innovation, he ensures high-quality digital solutions
                alt="Zhalla Karwan" 
                class="profile-img">
           <h3>🎖️Zhalla Karwan</h3>
-          <p>is a project Team  Manager at AMZ Group. expertise information technology web development programming She coordinates tasks, manages workflow, and ensures smooth collaboration among team members. Her organizational skills and  help deliver projects efficiently and on time.</p>
+          <p data-i18n="Zabout">The team manager، Zhalla Karwan، a student of the IT department، the recipient and initiator، and the organization and conceptualization of projects before they start، has extensive experience in programming and website management.</p>
         </div>
 
         <div class="feature card">
@@ -387,8 +418,7 @@ With leadership skills and innovation, he ensures high-quality digital solutions
                alt="Anas Mohsin" 
                class="profile-img">
           <h3>🎖️Anas Mohsin</h3>
-          <p>is a project Team  Manager at AMZ Group. He focuses on technical development, teamwork, and problem-solving.
-With a passion for technology and innovation, he supports the team in building modern and creative digital</p>
+          <p data-i18n="Aabout">The Team Project Manager، Anas Mohsen، a student in the IT department، is the one who brainstorms the projects and leads the team when any problem arises and is ready to solve it in a professional manner, and supports the team.</p>
         </div>
 
       </div>
@@ -397,10 +427,7 @@ With a passion for technology and innovation, he supports the team in building m
                alt="Lebanese French University" 
                class="profile-img">
           <h3>Lebanese French University</h3>
-          <p>AMZ Group is proudly founded by a team of dedicated students from the Lebanese French University, 
-College of Engineering and Computer Science. 
-Our academic background equips us with strong technical knowledge in software development, system design, and modern technologies. 
-By combining university education with practical experience, we strive to deliver innovative, efficient, and professional digital solutions.</p>
+          <p data-i18n="lfu">Our team is proudly supported, supervised by the Lebanese French University, and our team is a student of the Lebanese French University in the Department of Information Technology, the Lebanese French University we are committed to building this team in a dedicated and professional way..</p>
         </div>
 
       </div>
@@ -421,7 +448,7 @@ By combining university education with practical experience, we strive to delive
     
     </div>
     <h2>MATHEMATICS SOLVER</h2>
-    <p>This project solves mathematical equations quickly
+    <p data-i18n="mathSolver">This project solves mathematical equations quickly
     and accurately, providing clear step-by-step solutions
      to help students understand and learn better.
 </p>
@@ -437,7 +464,7 @@ By combining university education with practical experience, we strive to delive
   <div class="card-content">
     </div>
     <h2>SPEED WIFI</h2>
-    <p>A smart WiFi speed testing website designed to measure download speed, 
+    <p data-i18n="wifi">A smart WiFi speed testing website designed to measure download speed, 
 upload speed, and ping in real-time, helping users monitor their internet performance easily.
 
 </p>
@@ -451,7 +478,7 @@ upload speed, and ping in real-time, helping users monitor their internet perfor
   <div class="card-content">
     </div>
     <h2>QRCODE PRO</h2>
-    <p>Modern QR Code Generator & Scanner Web App with Camera Support, Image Scan, Download Option, Multi-Language, Login System, QR History & PWA Installable Design.
+    <p data-i18n="qr">Modern QR Code Generator & Scanner Web App with Camera Support, Image Scan, Download Option, Multi-Language, Login System, QR History & PWA Installable Design.
 
 </p>
     <div class="btn-group">
@@ -464,7 +491,7 @@ upload speed, and ping in real-time, helping users monitor their internet perfor
   <div class="card-content">
     </div>
     <h2>AMZ SNAKE</h2>
-    <p>Snake is a classic arcade game where players control a growing snake that eats apples to increase its length. The challenge is to avoid hitting the walls or the snake’s own body as it moves faster over time.
+    <p data-i18n="snake">Snake is a classic arcade game where players control a growing snake that eats apples to increase its length. The challenge is to avoid hitting the walls or the snake’s own body as it moves faster over time.
 </p>
     <div class="btn-group">
       <a href="https://amz-group.github.io/snakegame/" target="_blank" class="project-btn">Open Project</a>
@@ -476,7 +503,7 @@ upload speed, and ping in real-time, helping users monitor their internet perfor
   <div class="card-content">
     </div>
     <h2>AMZ FLAPPY BIRD</h2>
-    <p>Flappy Bird is a highly addictive arcade game where players tap to guide a bird through endless obstacles, testing their timing and precision in a simple yet challenging experience
+    <p data-i18n="flappy">Flappy Bird is a highly addictive arcade game where players tap to guide a bird through endless obstacles, testing their timing and precision in a simple yet challenging experience
 </p>
     <div class="btn-group">
       <a href="https://amz-group.github.io/flappy-bird/" target="_blank" class="project-btn">Open Project</a>
@@ -491,10 +518,10 @@ upload speed, and ping in real-time, helping users monitor their internet perfor
       <div class="container">
         <div class="card">
           <div class="kicker">Contact</div>
-          <h2>Let’s Connect</h2>
-          <p class="lead">Want to collaborate or just say hi? Reach out anytime.</p>
+          <h2>Contact us</h2>
+          <p class="lead" data-i18n="conAbout">If you would like more information or to contact us, please select one of the options below.</p>
           <div class="cta">
-            <a class="btn primary" href="amz.group.development@gmail.com">Email Me</a>
+            <a class="btn primary" href="amz.group.development@gmail.com">Email</a>
             <a class="btn" href="https://t.me/amzgroup_xyz">Telegram</a>
             <a class="btn" href="https://github.com/amz-group">GitHub</a>
           </div>
@@ -603,21 +630,73 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+<script>
+
+const translations = {
+
+  ku: {
+    homeTitle: "AMZ GROUP بۆ گەشەپێدانی گشتی",
+    homeDesc: "AMZ Group تیمێکی پرۆفیشناڵە لە پەرەپێدانی وێبسایت،سۆفتوێر، بەرنامە و یاریەکان. ئێمە ئامەدەین بۆ چارەسەر کردنی هەموو کێشەکان بە شێوەیەکی مۆدێرن و داهێنەرانە بە کوالیتی بەرز و ستانداردی نێودەوڵەتی دابین دەکەین. ئێرە شوێنێکە بۆ بنیاتنانی بیرۆکەکانت و داهێنان.",
+    contactBtn: "بۆ پەیوەندی کردن",
+    projectBtn: "پرۆژەکانمان",
+    aboutDesc:"ئەم تیمە پێکهاتوە لەلایەن محمد بارزان،ژاڵە کاروان،ئەنەس موحسین. ئێمە تیمێکین کاردەکەین بۆ دروستکردنی وێبسایت،سۆفتوێر،بەرنامە، وەهەروەها چارەسەر کردنیان بە شێوەیەکی پێشکەوتو و ستانداردی جیهانی.",
+    skillDesc:"تەکنەلۆژیای نوێ • داهێنان و نوێکردنەوە. • پەرەپێدانی سیستەمی دیجیتاڵ. • فێربوونی بەردەوام. • دروستکردنی پڕۆژەی گەورە و کاری پیشەیی.",
+    Mabout:"دامەزێنەر و سەرۆکی تیم، محمد بارزان قوتابی بەشی IT سەرپەرشتی و دەستپێکەری پرۆژەکانە، شارەزا لە بواری دروست کردنی وێبسایت،دیزاین،پرۆگرامینگ، بەشێوەیەکی تەواو پێشکەوتو و ستانداردانە.",
+    Zabout:"بەرێوبەری کار و باری تیم، ژاڵە کاروان قوتابی بەشی IT،وەرگر و دەسپێکەر و رێک خستن و دانانی بیرۆکەی پرۆژەکان بەر لە دەستپێکردنیان، شارەزای تەواوی هەیە لە پرۆگرامینگ و بەرێوبردنی وێبسایت.",
+    Aabout:"بەرێوبەری تیم و پرۆژەکان، ئەنەس موحسین قوتابی بەشی IT،ئەو دانانی بیرۆکەکانی پرۆژەکانە و سەرپەریشتیاری تیمەکەیە لە کاتی بونی هەر کێشەیەک ئامەدە دەبێت بە چارەسەرکردنی بە شێوەیەکی تەواو پرۆفیشناڵانە، پشتگیری تیمەکەیە.",
+    lfu:"بە شانازیەوە تیمەکەمان لەلایەن زانکۆی لوبنانی فەرەنسی ەوە پشتگیری و چاودێری و سەرپەرەشتی دەکرێت تیمەکەمان قوتابی زانکۆی لوبنانی فەرەنسین لە بەشی تەکنەلۆژیای زانیاریی،زانکۆی لوبنانی فەرەنسی تیمەکەی پێکهێناوە بەشێوەیەکی دڵسۆزانە و پرۆفیشناڵانە.",
+    mathSolver:"ئەم پرۆژەیە ئامەدە کراوە بۆ قوتابیان، پێکهاتوا لە چەند بابەتێکی شیکارکردنی وانەکانی بیرکاری بە شێوەیەکی زۆر خێرا و وردەکاری.",
+wifi:"ئەم پرۆژەیە داندراوە بۆ خزمەت گوزاری سود وەرگرتن لە تێست کردنی تۆری وایفای بە شێوەیەکی پێشکەوتو.",
+qr:"ئەم پرۆژەیە دروست کراوە بۆ خزمەتگوزاری QR Code & Scann، بەرهەمەکە پێکهاتوە لە دروستکردنی QR Code, دانانی وێنە و دانانی text, وەScann کردنن.",
+snake:"یارییەکی کلاسیکیە تیایدا یاریزانان کۆنتڕۆڵی مارێکی گەورە دەکەن کە سێو دەخوات بۆ زیادکردنی درێژی. بەرەنگارییەکە ئەوەیە کە خۆت لە بەرکەوتن بە دیوارەکان یان لەشی مارەکە دوور بخەیتەوە کاتێک بە تێپەڕبوونی کات خێراتر دەجوڵێت.",
+flappy:"Flappy bird یاریەکی ئاڵودەکەرە کە یاریزانان کلیک دەکەن بۆ فراندنی باڵندەکە بە شێوەیەکی بێکۆتای زۆر سەخت کەبەتێپەربونی کات خێرای و سەختی زیاد دەکات.",
+conAbout:"گەر دەتەوێت زانیاری زیاتر یاخود پەیوەندیمان پێوە بکەیت ئەوە تکایە یەکێکلە هەڵبژاردەکانی خوارەوە هەڵبژێرە.",
+moreinfo:"زانیاری زیاتر"
+
+}
+
+};
+
+function setLanguage(lang){
+
+  localStorage.setItem("language", lang);
+if(lang === "en"){
+    location.reload();   // گەڕانەوە بۆ ئینگلیزی
+    return;
+  }
+  if(lang === "ku"){
+    document.documentElement.setAttribute("dir", "rtl");
+    document.documentElement.setAttribute("lang", "ku");
+  } else {
+    document.documentElement.setAttribute("dir", "ltr");
+    document.documentElement.setAttribute("lang", "en");
+  }
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]){
+      el.textContent = translations[lang][key];
+    }
+  });
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+
+  const savedLang = localStorage.getItem("language") || "en";
+  document.getElementById("languageSelect").value = savedLang;
+
+  if(savedLang === "ku"){
+    setLanguage("ku");
+  }
+
+  document.getElementById("languageSelect").addEventListener("change", function(){
+    setLanguage(this.value);
+  });
+
+});
+
+</script>
 </body>
 	
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
