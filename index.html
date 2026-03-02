@@ -303,39 +303,7 @@ html[dir="rtl"] .cta {
     @media (max-width: 840px){ .hero-inner{grid-template-columns:1fr} }
 	  }
   
-<link rel="manifest" id="pwa-manifest">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="AMZ">
-<meta name="theme-color" content="#4f46e5">
-<link rel="apple-touch-icon" href="IMG_2731.PNG">
-	  <script>
-(function(){
-  var iconB64 = "IMG_2731.PNG";
-	var manifest = {
-    name: "AMZ GROUP",
-    short_name: "AMZ",
-    description: "AMZ GROUP",
-    start_url: "./",
-    display: "standalone",
-    background_color: "#0b1220",
-    theme_color: "#4f46e5",
-    orientation: "portrait",
-    icons: [
-      { src: iconB64, sizes: "192x192", type: "image/png", purpose: "any maskable" }
-    ]
-  };
-  var blob = new Blob([JSON.stringify(manifest)], {type:"application/manifest+json"});
-  document.getElementById('pwa-manifest').href = URL.createObjectURL(blob);
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      var swCode = "const CACHE='amz-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE)));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));";
-      var swBlob = new Blob([swCode],{type:'application/javascript'});
-      navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(function(){});
-    });
-  }
-})();
+
   </style>
 </head>
 <body>
@@ -735,6 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 
 </html>
+
 
 
 
